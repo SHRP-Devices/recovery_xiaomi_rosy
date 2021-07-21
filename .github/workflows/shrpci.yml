@@ -1,7 +1,8 @@
 name: SHRP CI
 on:
-  push
-  workflow_dispatch
+  workflow_dispatch:
+  watch:
+      types: [started]
 env:
   MANIFEST: "git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0"
   # Recovery Manifest URL with -b branch
