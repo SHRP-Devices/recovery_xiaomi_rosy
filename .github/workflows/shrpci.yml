@@ -6,7 +6,7 @@ on:
 env:
   MANIFEST: "git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0"
   # Recovery Manifest URL with -b branch
-  DT_LINK: "https://github.com/ElytrA8/recovery_rosy"
+  DT_LINK: "https://github.com/SHRP-Devices/recovery_xiaomi_rosy -b p"
   # Your Device Tree Link
   VENDOR: "xiaomi"
   # Your Device's Vendor name as in used inside DT. Example: xiaomi, samsung, asus, etc.
@@ -39,13 +39,13 @@ jobs:
               cd ${BuildPath}/out/target/product/${CODENAME}/
               ZIP=$(echo *stable*.zip)
               curl -F document=@$ZIP "https://api.telegram.org/bot$TOKEN/sendDocument" \
-                  -F chat_id="-1001181350086" \
+                  -F chat_id="-1001296548298" \
                   -F "disable_web_page_preview=true" \
                   -F "parse_mode=html" \
                   -F caption=" <i> SHRP Recovery </i> for <b> '$VENDOR' '$CODENAME' </b> is Available for Testing Purposes Only | Build finished on <b> $(date) </b> | <i> #SHRP Recovery </i> "
               ZIP=$(echo *AddonRescue*.zip)
               curl -F document=@$ZIP "https://api.telegram.org/bot$TOKEN/sendDocument" \
-                  -F chat_id="-1001181350086" \
+                  -F chat_id="-1001296548298" \
                   -F "disable_web_page_preview=true" \
                   -F "parse_mode=html" \
                   -F caption=" <i> SHRP AddOnRescue
